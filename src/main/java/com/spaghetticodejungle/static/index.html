@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java 18 - Simple http server</title>
+</head>
+<body>
+
+<div id="quotes"></div>
+
+<script>
+
+            const url = 'http://localhost:8080/data.json'
+
+            fetch(url)
+                .then( res => { return res.json(); } )
+                .then( data => { console.log(data);
+        // Generate a random number
+        function generateRandomInteger(max) {
+        return Math.floor(Math.random() * max) + 1;
+        }
+
+        let randomNumber = generateRandomInteger(5);
+
+        let output = '<h2 class="mb-4">Quote of the day</h2>';
+        var bgImage = "";
+        data.forEach(function (item) {
+        if (item.id != randomNumber) return;
+        bgImage =  String(item.id) + ".jpg";
+        output += `
+        
+       <h1>${item.quote}</h1>
+       <h3> <pre class="tab">     - ${item.name}</pre></h3>
+        
+      `} )
+        console.log(bgImage);
+        document.body.style.backgroundImage = "url("+ bgImage + ")";
+        document.getElementById('quotes').innerHTML = output
+        
+       })
+                .catch( err => { console.log(`Error Fetching data : ${error}`)
+      document.getElementById('quotes').innerHTML = 'Error Loading Data' } )
+
+        </script>
+
+</body>
+</html>
+
+<style>
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+  height: 100vh;
+}
+#app {
+  font-family: Helvetica-Neue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #FDFD96;
+}
+h1 {
+    color: #FDFD96;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+}
+h2 {
+    color: #FDFD96;
+    font-size: 20px;
+    font-style: bold;
+    text-align: left;
+}
+h3 {
+    color: #FDFD96;
+    font-size: 40px;
+    font-style: bold;
+    text-align: right;
+}
+</style>

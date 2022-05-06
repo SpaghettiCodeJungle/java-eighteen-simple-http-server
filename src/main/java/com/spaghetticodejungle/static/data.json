@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Oprah Winfrey",
+        "quote": "The biggest adventure you can take is to live the life of your dreams."
+    },
+    {
+        "id": 2,
+        "name": "Muhammad Ali",
+        "quote": "Don't count the days, make the days count."
+    },
+    {
+        "id": 3,
+        "name": "Winston Churchill",
+        "quote": "If you're going through hell, keep going."
+    },
+    {
+        "id": 4,
+        "name": "Confucious",
+        "quote": "It does not matter how slowly you go as long as you do not stop."
+    },
+    {
+    "id": 5,
+    "name": "Marie Curie",
+    "quote": "I was taught that the way of progress was neither swift nor easy."
+    }
+]
